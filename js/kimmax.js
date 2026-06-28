@@ -98,7 +98,7 @@ $(function(){
 
 /* Web3Forms Contact Form */
 
-    $('#contact_form').on('submit', function (e) {
+    $(document).on('submit', '#contact_form', function (e) {
         e.preventDefault();
 
         var form = document.getElementById('contact_form');
