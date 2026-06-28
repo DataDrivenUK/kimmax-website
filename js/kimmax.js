@@ -96,29 +96,40 @@ $(function(){
     });
 
 
-/* AJAX Contact Form  */
+/* Web3Forms Contact Form */
 
     $('#contact_form').on('submit', function (e) {
-
         e.preventDefault();
 
-        $.ajax({
-          type: 'post',
-          url: 'php/mail.php',
-          data: $('form').serialize(),
-          beforeSend: function() {
-            $("#button_submit").addClass('uk-hidden');
-            $("#button_sending").removeClass('uk-hidden');
-         },
-          success: function () {
-            $('#contact_form_success').removeClass('uk-hidden');
-            $("#button_submit").removeClass('uk-hidden');
-            $("#button_sending").addClass('uk-hidden');
-            document.getElementById('contact_form').reset();
-          }
-        });
+        var form = document.getElementById('contact_form');
+        var formData = new FormData(form);
 
-      }); 
+        $('#btn_submit').addClass('uk-hidden');
+        $('#btn_sending').removeClass('uk-hidden');
+        $('#form_success').addClass('uk-hidden');
+        $('#form_error').addClass('uk-hidden');
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+            $('#btn_submit').removeClass('uk-hidden');
+            $('#btn_sending').addClass('uk-hidden');
+            if (data.success) {
+                $('#form_success').removeClass('uk-hidden');
+                form.reset();
+            } else {
+                $('#form_error').removeClass('uk-hidden');
+            }
+        })
+        .catch(function() {
+            $('#btn_submit').removeClass('uk-hidden');
+            $('#btn_sending').addClass('uk-hidden');
+            $('#form_error').removeClass('uk-hidden');
+        });
+    });
 
 })
 
@@ -152,15 +163,6 @@ function getKeyImage(imageTag) {
         });
 }
 
-/* $( document ).ready(function() {
-    var pageID = getUrlParameter('page'); // "edit"
-    if (pageID === undefined || pageID === null) {
-    }
-    $('#mainContent').load("content/site/" + pageID);
-    $('#holderContent').load("content/core/page1.html");
-    //toastr["info"]("Welcome to our website - Enjoy ");
-}); */
-
 function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -171,12 +173,10 @@ function getUrlParameter(name) {
 
 function loadPage(pageLib, pageID) {
     $('#mainContent').load("content/" + pageLib + "/" + pageID);
-    //toastr["success"]("You opened the " + pageID + " Content");
 };
 
 function loadModal(pageLib, pageID) {
     $('#holderModal').load("content/" + pageLib + "/" + pageID);
-    //toastr["success"]("You opened the " + pageID + " Content");
 };
 
 
@@ -187,5 +187,3 @@ function browserBack() {
 function browserForward() {
     window.history.forward();
 };
-
-

@@ -2,7 +2,7 @@
   <section id="contact" class="kx-contact uk-text-center" data-uk-parallax="bgy: -50" style="background-image: url('content/images/the3amigos.jpg')">
     <div class="kx-contact-content uk-container uk-position-relative">
       <h2 class="uk-width-xxlarge uk-margin-auto">Let's talk about the breed</h2>
-      <button data-uk-toggle="target: #contact_modal" data-caption="YouTube" class="uk-button uk-button-large uk-button-primary uk-margin-top">CONTACT US</button>
+      <button data-uk-toggle="target: #contact_modal" data-caption="Contact Us" class="uk-button uk-button-large uk-button-primary uk-margin-top">CONTACT US</button>
     </div>
 
     <div class="kx-dark-overlay"></div>
@@ -14,22 +14,52 @@
 
           <h2>Contact Us</h2>
 
-              <img src="content/images/hero.jpg" alt="img">
+          <img src="content/images/hero.jpg" alt="img">
 
-              <p>For information about the suitability of the breed for you, up coming litters or general advice on ownership, care and training of the breed, you can get in touch by one of the means below:
-              </p>
+          <p>For information about the suitability of the breed for you, upcoming litters or general advice on ownership, care and training, get in touch:</p>
 
-              <h3>Call or message Maxine on <strong><a href="tel:+447825412599">07825 412599</a></strong></h3>
+          <h3>Call or message Maxine on <strong><a href="tel:+447825412599">07825 412599</a></strong></h3>
+          <h3>Email us at <strong><a href="mailto:info@kimmax.co.uk">info@kimmax.co.uk</a></strong></h3>
 
-              <h3>Email us at <strong><a href="mailto:info@kimmax.co.uk">info@kimmax.co.uk</a></strong></h3>
+          <hr class="uk-margin-large-top uk-margin-large-bottom">
+          <h3>Or send us a message</h3>
 
-              <h3>Join us on Facebook</h3>
-               <p>
-                  <a href="https://www.facebook.com/maxine.mccullough.kimmax/" rel="noopener" target="_blank" class="uk-button uk-button-default uk-text-primary">Join <span data-uk-icon="facebook"></span> MAXINE.MCCULLOUGH</a>
-</p><p>
-                  <a href="https://www.facebook.com/groups/totallygwp/" rel="noopener" target="_blank" class="uk-button uk-button-default uk-text-primary">Join <span data-uk-icon="facebook"></span> TOTALLY GWP</a>
-                </p>
+          <!-- Web3Forms Contact Form -->
+          <form id="contact_form">
+            <input type="hidden" name="access_key" value="83805e2f-8ebb-4900-b2cc-b1165ac3719f">
+            <input type="hidden" name="subject" value="New enquiry from Kimmax.co.uk">
+            <input type="hidden" name="from_name" value="Kimmax Website">
 
+            <div class="uk-margin">
+              <input class="uk-input" type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div class="uk-margin">
+              <input class="uk-input" type="email" name="email" placeholder="Your email address" required>
+            </div>
+            <div class="uk-margin">
+              <textarea class="uk-textarea" name="message" rows="5" placeholder="Your message" required></textarea>
+            </div>
+
+            <div id="form_success" class="uk-hidden uk-alert-success uk-margin-top" data-uk-alert>
+              <p>Thank you — we'll be in touch soon!</p>
+            </div>
+            <div id="form_error" class="uk-hidden uk-alert-danger uk-margin-top" data-uk-alert>
+              <p>Something went wrong. Please try emailing us directly at <a href="mailto:info@kimmax.co.uk">info@kimmax.co.uk</a></p>
+            </div>
+
+            <button id="btn_submit" type="submit" class="uk-button uk-button-primary uk-margin-top">Send Message</button>
+            <span id="btn_sending" class="uk-hidden uk-text-muted uk-margin-top uk-display-block">Sending&hellip;</span>
+          </form>
+          <!-- End Web3Forms Contact Form -->
+
+          <hr class="uk-margin-large-top">
+          <h3>Join us on Facebook</h3>
+          <p>
+            <a href="https://www.facebook.com/maxine.mccullough.kimmax/" rel="noopener" target="_blank" class="uk-button uk-button-default uk-text-primary">Join <span data-uk-icon="facebook"></span> MAXINE.MCCULLOUGH</a>
+          </p>
+          <p>
+            <a href="https://www.facebook.com/groups/totallygwp/" rel="noopener" target="_blank" class="uk-button uk-button-default uk-text-primary">Join <span data-uk-icon="facebook"></span> TOTALLY GWP</a>
+          </p>
 
         </div>
       </div>
