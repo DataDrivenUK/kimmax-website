@@ -1,0 +1,52 @@
+  <!-- Contact -->
+  <section id="contact" class="kx-contact uk-text-center" data-uk-parallax="bgy: -50" style="background-image: url('content/images/the3amigos.jpg')">
+    <div class="kx-contact-content uk-container uk-position-relative">
+      <h2 class="uk-width-xxlarge uk-margin-auto">Let's talk about the breed</h2>
+      <button data-uk-toggle="target: #contact_modal" data-caption="YouTube" class="uk-button uk-button-large uk-button-primary uk-margin-top">CONTACT US</button>
+    </div>
+
+    <div class="kx-dark-overlay"></div>
+
+    <div id="contact_modal" class="contact-modal uk-modal-full" data-uk-modal>
+      <div class="uk-modal-dialog">
+        <div class="uk-container-xsmall uk-margin-auto uk-padding-large">
+          <h2>Please get in touch</h2>
+          <p>Feel free to drop us a message on the form below, or call Maxine direct on 07825 412599</p>
+          <button class="uk-modal-close-full uk-close-large" type="button" data-uk-close></button>
+          <form id="contact_form" class="uk-form-stacked" action="php/mail.php" method="POST">
+            <div class="uk-margin">
+              <label class="uk-form-label" for="name_form">Your Name</label>
+              <div class="uk-form-controls">
+                <input class="uk-input uk-form-large" id="name_form" name="name" type="text" placeholder="Enter your full name" required>
+              </div>
+            </div>
+            <div class="uk-margin">
+              <label class="uk-form-label" for="email_form">Your Email</label>
+              <div class="uk-form-controls">
+                <input class="uk-input uk-form-large" id="email_form" name="email" type="email" placeholder="Enter your email" required>
+              </div>
+            </div>
+            <div class="uk-margin">
+              <label class="uk-form-label" for="subject_form">Your Subject</label>
+              <div class="uk-form-controls">
+                <input class="uk-input uk-form-large" id="subject_form" name="subject" type="text" placeholder="Enter your subject" required>
+              </div>
+            </div>
+            <div class="uk-margin">
+              <label class="uk-form-label" for="message_form">Your message</label>
+              <div class="uk-form-controls">
+                <textarea id="message_form" class="uk-textarea uk-form-large" name="message" rows="5" placeholder="Enter your message" required></textarea>
+              </div>
+            </div>
+            <div id="contact_form_success" class="uk-alert-success uk-hidden" data-uk-alert>
+              <a class="uk-alert-close" data-uk-close></a>
+              <p>Thank you, we will reply as soon as we can.</p>
+            </div>
+            <button id="button_submit" class="uk-button uk-button-primary">Send Message</button>
+            <button id="button_sending" class="button-sending uk-button uk-button-primary uk-hidden" disabled><span class="uk-margin-small-right" data-uk-spinner></span>Sending</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact -->

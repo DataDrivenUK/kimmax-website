@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kimmax German Wirehaired Pointers</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Author -->
+  <meta name="author" content="Kimmax">
+  <!-- Description -->
+  <meta name="description" content="Kimmax German Wirehaired Pointers">
+  <!-- Keywords -->
+  <meta name="keywords" content="gwp, german wirehaired pointer, german wirehaired, pointer, drahthaar, deutsch drahthaar, german wirehaired pointer, german pointer, dog, gun dog, gundog, hunt, point, retrieve, HPR">
+  <!-- Favicon -->
+  <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="css/uikit.min.css" />
+
+  <!-- Carousel CSS -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+  <!-- My CSS -->
+  <link rel="stylesheet" href="css/kimmax.css">
+
+  <!-- HTML Component Assembler -->
+  <script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("main-content");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("main-content");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+  </script>
+
+  <script>
+    function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
+var dogName = getQueryVariable("dogName")
+  </script>
+
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader" data-uk-spinner></div>
+  <!-- End Preloader -->
+
+  <script>
+    window.onload = function(){
+        document.getElementById('output').innerHTML = dogName;
+    };
+    </script>
+
+  <!-- Imported Content -->
+  <div main-content="content/panels/headeralt.html"></div>
+  
+  <!-- Works -->
+<section id="works" class="kx-dark kx-works uk-padding-remove-bottom">
+  <script type="text/javascript" src="https://product-gallery.cloudinary.com/all.js"></script>
+
+	<div class="uk-container">
+		<div class="kx-section-header uk-text-center">
+			<span class="kx-section-title_small">OUR WORKS</span>
+			<h2 class="kx-section-title" id="output"></h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, vitae dolores nemo veniam sapiente magnam distinctio nesciunt soluta molestias, ut assumenda?</p>
+		</div>
+
+	<div class="uk-container">
+		<div class="cloudWrap" id="cloudWrap"></div>
+    <script type="text/javascript">
+
+			const kxGallery = cloudinary.galleryWidget({
+			container: "#cloudWrap",
+			cloudName: "kimmaxgwp",
+      displayProps: {},
+      aspectRatio: "4:3",
+      carouselStyle: "thumbnails",
+      carouselLocation: "bottom",
+      thumbnailProps: {width: 200,height: 150, spacing:4}
+			mediaAssets: [
+      { tag: dogName }
+       ]
+			});
+
+			kxGallery.render();
+
+		</script>
+
+	</div>
+	
+	
+</section>
+<!-- End Works -->
+
+  <!-- <div main-content="content/panels/george.html"></div> -->
+  <!-- End Imported Content -->
+
+  <script> includeHTML();</script>
+
+  <!-- jQuery JS -->
+    <script src="js/jquery.min.js"></script>
+    <!-- UIkit JS -->
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    
+    <!-- Owl Carousel JS -->
+    <script src="js/owl.carousel.min.js"></script>
+   <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
+
+    <!-- My JS -->
+    <script src="js/kimmax.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,51 @@
+  <!-- Header -->
+  <header>
+    <!-- Navbar -->
+    <nav class="kx-navbar uk-navbar-container" data-uk-sticky="top: 0; animation: uk-animation-slide-top;">
+      <div class="uk-container" data-uk-navbar>
+        <div class="uk-navbar-left">
+          <!-- Logo -->
+          <a class="uk-navbar-item uk-logo" href="https://kimmax.co.uk">
+            <img src="content/images/logo.svg" height="100" alt="Logo">
+          </a>
+          <!-- End Logo -->
+        </div>
+        <div id="navbar-scrollspy" class="uk-navbar-right">
+          <!-- Desktop Nav -->
+          <ul class="uk-navbar-nav uk-visible@m">
+            <!-- Menu Link -->
+            <li><a href="https:/kimmax.co.uk/#mission" data-uk-scroll="offset: 50">About Us</a></li>
+            <li><a href="https://kimmax.co.uk/#portofolio" data-uk-scroll="offset: 50">Our Dogs</a></li>
+            <li><a href="https://kimmax.co.uk/#services" data-uk-scroll="offset: 50">The GWP</a></li>
+            <li><a data-uk-toggle="target: #contact_modal">Contact Us</a></li>
+            <!-- End Menu Link -->
+          </ul>
+          <!-- Mobile Nav -->
+          <div class="kx-mobile-navbar uk-hidden@m ">
+            <a class="uk-navbar-item" href="#" uk-toggle="target: #offcanvas-flip" uk-icon="icon: menu; ratio: 2"></a>
+
+            <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+                <div class="uk-offcanvas-bar">
+
+                    <button class="uk-offcanvas-close uk-close-large" type="button" uk-close></button>
+                    <br/><br/><br/>
+
+                      <ul class="kx-mobile-navbar-item uk-margin-remove uk-text-center uk-padding-remove-left uk-margin-auto-vertical" data-uk-scrollspy="cls: uk-animation-slide-top-medium; target: li; delay: 100; repeat: true;">
+                        <!-- Menu Link -->
+                        <li><a href="https://kimmax.co.uk/#mission" uk-toggle="target: #offcanvas-flip" data-uk-scroll="offset: 50">About Us</a></li>
+                        <li><a href="https://kimmax.co.uk/#portofolio" uk-toggle="target: #offcanvas-flip" data-uk-scroll="offset: 50">Our Dogs</a></li>
+                        <li><a href="https://kimmax.co.uk/#services" uk-toggle="target: #offcanvas-flip" data-uk-scroll="offset: 50">The GWP</a></li>
+                        <li><a data-uk-toggle="target: #contact_modal" >Contact Us</a></li>
+                      <!-- End Menu Link -->
+                    </ul>
+
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+  </header>
+  <!-- End Header -->
