@@ -96,7 +96,7 @@ $(function(){
     });
 
 
-/* Web3Forms Contact Form */
+/* Web3Forms Contact Form - Web4forms rewrite */
 
     $(document).on('submit', '#contact_form', function (e) {
         e.preventDefault();
